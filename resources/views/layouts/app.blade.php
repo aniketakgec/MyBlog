@@ -13,7 +13,7 @@
     
     </head>
     <body>
-        @include('inc.navbar')
+        @include('inc.navbar')<br>
         <div class="container">
        @yield('content')
         </div>

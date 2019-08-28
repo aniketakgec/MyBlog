@@ -15,7 +15,8 @@ class PostsController extends Controller
     public function index()
     {
 
-       $posts= Post::all();
+       // $posts=Post::orderBy('title','desc')->paginate(1);
+     $posts= Post::all();
         return view ('post.index')->with('posts',$posts);
     }
 
@@ -27,6 +28,7 @@ class PostsController extends Controller
     public function create()
     {
         //
+        return view('post.create');
     }
 
     /**
@@ -48,9 +50,10 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+      
 
-        return Post::find($id);
+     $post=Post::find($id);
+     return view('post.show')->with('post',$post);
     }
 
     /**

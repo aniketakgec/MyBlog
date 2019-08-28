@@ -1,4 +1,4 @@
-<p align="center"><img src="https://ibb.co/grS7F6c"></p>
+<p align="center"><img src="https://ibb.co/cleagrS7F6c"></p>
 
 ## About MyBlog
 
