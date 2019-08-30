@@ -16,7 +16,7 @@
 <h1><b>{{$post->title}}<b></h1>
 <small><i>written on {{$post->created_at}}</i></small>
 <div>
-  {{$post->body}}
+{!! $post->body !!}
 
 </div>
 </div>

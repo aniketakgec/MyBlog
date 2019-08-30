@@ -9,7 +9,7 @@
     </div>
     <br>
   @endforeach
-   {{-- //  {{$posts->links()}} --}}
+   {{$posts->links()}} 
 
 @else
   <h3>No posts found!</h3>

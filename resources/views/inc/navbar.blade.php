@@ -20,4 +20,10 @@
           </ul>
          
         </div>
+
+        <div class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link " href="/posts/create">Create Post</a>
+              </li>
+        </div>
       </nav>
