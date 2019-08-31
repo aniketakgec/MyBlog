@@ -1,4 +1,4 @@
-<p align="center"><img src="Screenshot(12).png"></p>
+<p align="center"><img src="img.png"></p>
 
 ## About MyBlog
 
