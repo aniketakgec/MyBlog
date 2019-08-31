@@ -17,7 +17,9 @@
 <small><i>written on {{$post->created_at}}</i></small>
 <div>
 {!! $post->body !!}
+</div>
+</div>
+<hr>
+<a href="/posts/{{$post->id}}/edit" class="btn btn-secondary" id="edit">Edit Post</a>
 
-</div>
-</div>
 @endsection
