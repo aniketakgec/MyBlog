@@ -1,4 +1,4 @@
-<p align="center"><img src="https://ibb.co/cleagrS7F6c"></p>
+<p align="center"><img src="IMG/Screenshot(12).png"></p>
 
 ## About MyBlog
 
