@@ -10,7 +10,7 @@
 
     }
     </style>
-<a href="/posts" class="btn btn-primary" id="back">Go Back</a>
+<a href="/posts" class="btn btn-primary " id="back">Go Back</a>
 
 <div class="jumbotron">
 <h1><b>{{$post->title}}<b></h1>
@@ -20,6 +20,11 @@
 </div>
 </div>
 <hr>
-<a href="/posts/{{$post->id}}/edit" class="btn btn-secondary" id="edit">Edit Post</a>
+<a href="/posts/{{$post->id}}/edit" class="btn btn-success" id="edit">Edit Post</a>
+{!! Form::open(['action'=>['PostsController@destroy',$post->id],'method'=>'POST','class'=>'float-right'])!!}
+
+{{ Form::hidden('_method','DELETE')}}
+{{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+{!! Form::close() !!}
 
 @endsection
