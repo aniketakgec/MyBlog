@@ -23,4 +23,4 @@ Route::get('/about','PagesController@about');
 Auth::routes();
 
 
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@index') ;
