@@ -5,7 +5,8 @@
   @foreach ($posts as $item)
      <div class="card card-body bg-grey">
      <h3><a href="/posts/{{$item->id}}">{{$item->title}}</a></h3>
-     <small>Written on  {{$item->created_at}}</small>
+  
+     <small>Written on  {{$item->created_at}} </small>
     </div>
     <br>
   @endforeach
