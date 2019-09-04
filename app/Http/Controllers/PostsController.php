@@ -7,6 +7,19 @@ use App\Post;
 
 class PostsController extends Controller
 {
+
+
+      /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth',['except'=>['index','show']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +29,7 @@ class PostsController extends Controller
     {
 
         $posts=Post::orderBy('created_at','desc')->paginate(4);
-    //  $posts= Post::all();
+  //$posts= Post::all();
         return view ('post.index')->with('posts',$posts);
     }
 
@@ -81,6 +94,9 @@ class PostsController extends Controller
 
         
      $post=Post::find($id);
+     if(auth()->user()->id!=$post->user_id)
+     return redirect('/posts')->with('error','Unauthorized Access');
+        
      return view('post.edit')->with('post',$post);
     
         //
@@ -118,6 +134,9 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post=Post::find($id);
+
+        if(auth()->user()->id!=$post->user_id)
+     return redirect('/posts')->with('error','Unauthorized Access');
         $post->delete();
 
         return redirect('/posts')->with('success','Post Deleted Successfully !');
