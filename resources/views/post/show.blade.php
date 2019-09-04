@@ -13,6 +13,7 @@
 <a href="/posts" class="btn btn-primary " id="back">Go Back</a>
 
 <div class="jumbotron">
+ <img style="width:25%;" src="/storage/cover_images/{{$post->cover_image}}">
 <h1><b>{{$post->title}}<b></h1>
 <small><i>written on {{$post->created_at}}</i></small>
 <div>
